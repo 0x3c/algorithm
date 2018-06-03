@@ -22,3 +22,4 @@ class BubbleSort {
     return arr;
   }
 }
+module.exports = BubbleSort;
