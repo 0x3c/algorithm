@@ -1,27 +1,25 @@
 class Tester {
-  constructor(fn, data) {
-    this.fn = fn;
-    this.data = data;
+  constructor() {
     this.result = null;
   }
   start() {
-    //
     this.timeStart = new Date().getTime();
   }
   end() {
-    //
     this.timeEnd = new Date().getTime();
   }
-  run() {
-    //
+  run(SortClass, data) {
+    const sorter = new SortClass();
+
+    // console.log(data);
+
     this.start();
-    // your code
-    this.result = this.fn(this.data);
+    this.result = sorter.sort(data);
     this.end();
+
+    // console.log(this.result);
+
     this.log();
-  }
-  test() {
-    //
   }
   show() {
     console.log(this);
