@@ -19,10 +19,16 @@ class Tester {
 
     // console.log(this.result);
 
+    this.showResult(data);
     this.log();
   }
+
   show() {
     console.log(this);
+  }
+  showResult(data) {
+    const sortedData = data.sort((a, b) => a - b);
+    console.log(JSON.stringify(sortedData) === JSON.stringify(this.result));
   }
   log() {
     console.log(`cost ${this.timeEnd - this.timeStart} ms`);
